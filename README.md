@@ -14,4 +14,7 @@ cat > /etc/docker/daemon.json <<EOF
   "storage-driver": "overlay2"
 }
 EOF
+systemctl daemon-reload 
+systemctl restart docker 
+systemctl restart kubelet  #if you want to install kubernetes 
 ````
